@@ -6,5 +6,5 @@ saas				ACM		IEEE
 software+as+a+service		ACM		IEEE
 service+discovery		ACM(50)		IEEE(50)
 adaptive+service		ACM(50)		IEEE(50)
-replaceability+service		ACM		IEEE
-interchangeability+service	ACM		IEEE
+replaceability+service		ACM(50)		IEEE(50)
+interchangeability+service	ACM(50)		IEEE(50)
