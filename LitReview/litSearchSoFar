@@ -1,7 +1,10 @@
-soa+web:			ACM
-soa+internet:			ACM
-soa+mvc				ACM
-service+web+applications	ACM
-saas				ACM
-software+as+a+service		ACM
-service+discovery		ACM(50)
+soa+web:			ACM		IEEE
+soa+internet:			ACM		IEEE
+soa+mvc				ACM		IEEE
+service+web+applications	ACM		IEEE
+saas				ACM		IEEE
+software+as+a+service		ACM		IEEE
+service+discovery		ACM(50)		IEEE(50)
+adaptive+service		ACM(50)		IEEE(50)
+replaceability+service		ACM		IEEE
+interchangeability+service	ACM		IEEE
