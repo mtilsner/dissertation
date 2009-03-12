@@ -1,0 +1,73 @@
+Goal:
+  - reuse of applications + interfaces
+  - declarative composition
+  - cross-technology solution
+  - adaption of interface look
+  - loose coupling
+  - abstraction from service-domain-knowledge
+
+Approach:
+  - components
+    - properties
+      - states
+    - operations
+    - events
+
+  - standardized interface technology: XPIL
+    - component descriptors
+      - properties, states, operations, events
+      - adapter type
+    - composition model
+      - event listeners (connectors)
+	- 1:* publisher:subscribers
+	- transformation (internal, external)
+      - layout
+	- formless content for some layout manager
+
+  - process
+     1: existing services
+        - exposing methods, callbacks & properties
+     2: [o] implementation of adapter if not available
+     3: definition/extension/reuse of component descriptor
+     4: definition of composition model
+     5: generation of composite application
+	5.1: instantiation of components with design-parameters (configuration)
+     
+     a: component invokes callback
+     b: adapter throws event
+     c: middleware identifies listener
+	c.1: middleware performs parameter transformation
+	c.2: middleware calls adapter
+     d: adapter invokes component operation
+     e: component executes operation
+     
+  - identified potential
+     - successful implementation for AJAX & .NET
+     - non-intrusive reuse
+     - extensible / modular
+     - technology-wide adapters
+
+  - identified problems
+     - layout specification for 5
+     - missing technology adapter
+     - visual editor for composition model missing
+
+  - critic
+     + interesting approach
+     + event-driven design is very attractive
+     + combination of different technologies is cool
+
+     - still required service-domain-knowledge (for creating/extending/using the component descriptor)
+     - look customization dependend on current support
+       - either reimplementation of flexible interfaces
+       - or interface-parsing wrapper based on component framework
+       - or limited functionality
+     - adapters require meta-language-facilities (reflection), else wrapper needed FOR EACH COMPONENT
+     - why 1:* relation??? whatabout one operation being invoked through multiple events?
+     - no real loose coupling: (--> = depends on)
+       composite application --> composite model --> specific components
+     - example circumvents data mapping
+     - many statements are neither explained nor proven:
+       - "properties are more suitable for visual composition tools at design or deployment time, because they are simpler and easier to manage"
+       - "interface integration for web applications already works fine"
+     - how does state retrieval work?
